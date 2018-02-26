@@ -1,12 +1,35 @@
 article {
-  display: grid;
-  grid-template-columns: 80px 1fr 80px;
+    display: grid;
+    grid-template-columns: 40px 1fr 40px;
+    grid-column-gap: 10px;
 }
 
 article > * {
-  grid-column: 2;
-  min-width: 0;
+    grid-column: 2;
+    min-width: 0;
 }
+
+article > figure {
+    grid-column: 1 / -1;
+    margin: 20px 0;
+}
+
+article > .aside {
+    grid-column: 3;
+    color: #666;
+    font-size: 0.8em;
+}
+
+article > blockquote {
+    grid-column: 1 / -1;
+    margin: 10px 0;
+    color: #666;
+    border-left: 10px solid #eee;
+    padding-left: 10px;
+}
+
+
+/* General styling */
 
 html, body {
     margin: 0;
@@ -45,10 +68,4 @@ pre > code {
 
 figure {
     margin: 0;
-}
-
-figure figcaption {
-    color: #666;
-    font-style: italic;
-    font-size: 0.8em;
 }
